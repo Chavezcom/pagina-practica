@@ -9,6 +9,10 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.162.0",
+    "itsdangerous>=2.2.0",
+    "pwdlib[argon2]>=0.3.1",
+    "python-multipart>=0.0.32",
+    "sqlmodel>=0.0.48",
 ]
 
 [project.scripts]
@@ -17,3 +21,5 @@ fastapi-2026 = "fastapi_2026:main"
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
 build-backend = "uv_build"
+[tool.fastapi]
+entrypoint = "src.fastapi_2026.app:app"
